@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendataan Mahasiswa Fakultas Teknologi Industri ITERA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Form Pendataan Mahasiswa Fakultas Teknologi Industri ITERA</h1>
+    <form action="index2.html" method="get">
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" required> <br><br>
+
+        <label for="nim">Nomor Induk Mahasiswa:</label>
+        <input type="number" id="nim" name="nim" required> <br><br>
+
+        <label for="prodi">Program Studi:</label>
+        <select name="prodi" id="prodi" required>
+            <option value="Pilih">Pilih</option>
+            <option value="Teknik Elektro">Teknik Elektro</option>
+            <option value="Teknik Fisika">Teknik Fisika</option>
+            <option value="Teknik Informatika">Teknik Informatika</option>
+            <option value="Teknik Geologi">Teknik Geologi</option>
+            <option value="Teknik Geofisika">Teknik Geofisika</option>
+            <option value="Instrumentasi dan Automasi">Instrumentasi dan Automasi</option>
+            <option value="Rekayasa Minyak dan Gas">Rekayasa Minyak dan Gas</option>
+            <option value="Rekayasa Kosmetik">Rekayasa Kosmetik</option>
+            <option value="Rekayasa Kehutanan">Rekayasa Kehutanan</option>
+            <option value="Teknologi Industri Pertanian">Teknologi Industri Pertanian</option>
+            <option value="Teknologi Pangan">Teknologi Pangan</option>
+            <option value="Teknik Biomedis">Teknik Biomedis</option>
+            <option value="Teknik Biosistem">Teknik Biosistem</option>
+            <option value="Teknik Pertambangan">Teknik Pertambangan</option>
+            <option value="Teknik Telekomunikasi">Teknik Telekomunikasi</option>
+            <option value="Teknik Industri">Teknik Industri</option>
+            <option value="Teknik Sistem Energi">Teknik Sistem Energi</option>
+            <option value="Teknik Material">Teknik Material</option>
+            <option value="Teknik Kimia">Teknik Kimia</option>
+            <option value="Teknik Mesin">Teknik Mesin</option>
+        </select> <br><br>
+
+        <label for="email">Email ITERA:</label>
+        <input type="email" id="email" name="email" required> <br><br>
+
+        <label for="gender">Jenis Kelamin:</label><br>
+        <input type="radio" id="genderPria" name="gender" value="Laki-laki" required>Laki-laki<br>
+        <input type="radio" id="genderWanita" name="gender" value="Perempuan" required>Perempuan<br><br>
+
+        <label for="tgl">Tanggal Lahir:</label>
+        <input type="date" id="tgl" name="tgl" required> <br><br>
+
+        <label for="phone">Nomor Telepon:</label>
+        <input type="tel" id="phone" name="phone" required> <br><br>
+
+        <label for="alamat">Alamat Domisili:</label>
+        <input type="text" id="alamat" name="alamat" required> <br><br>
+
+        <label for="ktm">Kartu Tanda Mahasiswa:</label><br>
+        <input type="file" id="ktm" name="ktm" required> <br><br>
+
+        <label for="komen">Ajukan Komentar/Pertanyaan:</label><br>
+        <textarea name="komentar" id="komen">Tulis disini...</textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

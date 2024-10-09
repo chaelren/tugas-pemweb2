@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Informasi Pendaftar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Detail Informasi Pendaftar</h1>
+    <div class="detail-box">
+        <p id="nama">Nama: [Nama Lengkap]</p>
+        <p id="nim">NIM: [Nomor Induk Mahasiswa]</p>
+        <p id="prodi">Program Studi: [Program Studi]</p>
+        <p id="email">Email: [Email]</p>
+        <p id="gender">Jenis Kelamin: [Jenis Kelamin]</p>
+        <p id="tgl">Tanggal Lahir: [Tanggal Lahir]</p>
+        <p id="phone">Nomor Telepon: [Nomor Telepon]</p>
+        <p id="alamat">Alamat: [Alamat Domisili]</p>
+        <p id="komen">Komentar/Pertanyaan: [Komentar]</p>
+
+        <label for="ktm-img">Kartu Tanda Mahasiswa:</label>
+        <img id="ktm-img" src="" alt="Gambar KTM" style="max-width: 200px; display: none;">
+    </div>
+
+    <script>
+        // Mendapatkan data dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+
+        document.getElementById('nama').textContent = "Nama: " + urlParams.get('nama');
+        document.getElementById('nim').textContent = "NIM: " + urlParams.get('nim');
+        document.getElementById('prodi').textContent = "Program Studi: " + urlParams.get('prodi');
+        document.getElementById('email').textContent = "Email: " + urlParams.get('email');
+        document.getElementById('gender').textContent = "Jenis Kelamin: " + urlParams.get('gender');
+        document.getElementById('tgl').textContent = "Tanggal Lahir: " + urlParams.get('tgl');
+        document.getElementById('phone').textContent = "Nomor Telepon: " + urlParams.get('phone');
+        document.getElementById('alamat').textContent = "Alamat: " + urlParams.get('alamat');
+        document.getElementById('komen').textContent = "Komentar/Pertanyaan: " + urlParams.get('komen');
+
+        // Menampilkan gambar KTM (dummy placeholder)
+        const ktmFileName = urlParams.get('ktm');
+        if (ktmFileName) {
+            document.getElementById('ktm-img').src = "path/to/your/image/" + ktmFileName; // Ubah sesuai dengan path gambar
+            document.getElementById('ktm-img').style.display = "block";
+        }
+    </script>
+</body>
+</html>
